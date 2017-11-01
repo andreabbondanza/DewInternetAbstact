@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseUrl>https://github.com/andreabbondanza/DewInternetAbstact/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/andreabbondanza/DewInternetAbstact</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/andreabbondanza/DewInternetAbstact</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageIconUrl>http://andrewdev.eu/wp-content/uploads/2016/08/OnlyLogo.png</PackageIconUrl>
+  </PropertyGroup>
+
+</Project>
