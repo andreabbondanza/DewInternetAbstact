@@ -83,7 +83,7 @@ namespace DewCore.Abstract.Internet
     /// <summary>
     /// Rest client library interface
     /// </summary>
-    public interface IInternetClient<IResponse> where IResponse : IInternetResponse
+    public interface IInternetClient<IResponse, IRequest> where IResponse : IInternetResponse where IRequest : IInternetRequest
     {
         /// <summary>
         /// Check if an url is valid
@@ -156,7 +156,7 @@ namespace DewCore.Abstract.Internet
         /// </summary>
         /// <param name="request">The IRESTRequest object</param>
         /// <returns></returns>
-        Task<IResponse> PerformRequestAsync(IInternetRequest request);
+        Task<IResponse> PerformRequestAsync(IRequest request);
         /// <summary>
         /// Return IRESTResponse object from standard HttpResponseMessage
         /// </summary>
