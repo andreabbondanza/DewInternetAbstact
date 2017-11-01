@@ -83,7 +83,7 @@ namespace DewCore.Abstract.Internet
     /// <summary>
     /// Rest client library interface
     /// </summary>
-    public interface IClient<IResponse> where IResponse : IWebResponse
+    public interface IInternetClient<IResponse> where IResponse : IInternetResponse
     {
         /// <summary>
         /// Check if an url is valid
@@ -156,7 +156,7 @@ namespace DewCore.Abstract.Internet
         /// </summary>
         /// <param name="request">The IRESTRequest object</param>
         /// <returns></returns>
-        Task<IResponse> PerformRequestAsync(IWebRequest request);
+        Task<IResponse> PerformRequestAsync(IInternetRequest request);
         /// <summary>
         /// Return IRESTResponse object from standard HttpResponseMessage
         /// </summary>
@@ -167,7 +167,7 @@ namespace DewCore.Abstract.Internet
     /// <summary>
     /// Response interface
     /// </summary>
-    public interface IWebResponse
+    public interface IInternetResponse
     {
         /// <summary>
         /// Get the response status code
@@ -199,7 +199,7 @@ namespace DewCore.Abstract.Internet
     /// <summary>
     /// Request object interface
     /// </summary>
-    public interface IWebRequest
+    public interface IInternetRequest
     {
         /// <summary>
         /// Return the list of certificates for the request
