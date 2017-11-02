@@ -205,7 +205,7 @@ namespace DewCore.Abstract.Internet
         /// Return the list of certificates for the request
         /// </summary>
         /// <returns></returns>
-        List<X509Certificate> GetCertificates();
+        X509CertificateCollection GetCertificates();
         /// <summary>
         /// Add certificate to request
         /// </summary>
