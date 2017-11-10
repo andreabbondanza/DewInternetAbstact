@@ -163,6 +163,17 @@ namespace DewCore.Abstract.Internet
         /// <param name="httpResponseMessage"></param>
         /// <returns></returns>
         IResponse GetResponse(HttpResponseMessage httpResponseMessage);
+        /// <summary>
+        /// Set a http message handler
+        /// </summary>
+        /// <param name="handler"></param>
+        void SetHandler(HttpClientHandler handler);
+        /// <summary>
+        /// Return the http message handler
+        /// </summary>
+        /// <returns></returns>
+        HttpClientHandler GetHandler();
+
     }
     /// <summary>
     /// Response interface
@@ -201,21 +212,6 @@ namespace DewCore.Abstract.Internet
     /// </summary>
     public interface IInternetRequest
     {
-        /// <summary>
-        /// Return the list of certificates for the request
-        /// </summary>
-        /// <returns></returns>
-        X509CertificateCollection GetCertificates();
-        /// <summary>
-        /// Add certificate to request
-        /// </summary>
-        /// <param name="cert"></param>
-        void InsertX509Certificate(X509Certificate cert);
-        /// <summary>
-        /// Add certificate to request
-        /// </summary>
-        /// <param name="cert"></param>
-        void RemoveX509Certificate(X509Certificate cert);
         /// <summary>
         /// Set header to the request, overwrite if already exists
         /// </summary>
