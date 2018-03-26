@@ -234,6 +234,12 @@ namespace DewCore.Abstract.Internet
         /// <returns></returns>
         HttpContent GetContent();
         /// <summary>
+        /// Add a new FormUrlEncoded content 
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        void AddFormUrlEncodedContent(string key, string value);
+        /// <summary>
         /// Add a new MultipartFormDataContent to HTTPContent request. Be careful, it overwrite the previous HTTPContent, if it exists and is different for MultipartFormData
         /// </summary>
         /// <param name="key"></param>
